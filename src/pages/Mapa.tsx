@@ -40,10 +40,10 @@ export default function Mapa() {
             <li key={pessoa.nome} className="flex items-center gap-3">
               <Avatar nome={pessoa.nome} className="h-13 w-13" />
               <div className="min-w-0 flex-1">
-                <p className="truncate text-[1.0625rem] font-semibold lowercase text-ink">
+                <p className="text-[1.0625rem] font-semibold leading-tight lowercase text-ink">
                   {pessoa.nome}
                 </p>
-                <p className="truncate text-[0.75rem] text-ink-soft">
+                <p className="mt-0.5 text-[0.75rem] leading-tight text-ink-soft">
                   {pessoa.distancia} • {pessoa.situacao}
                 </p>
               </div>
@@ -51,7 +51,7 @@ export default function Mapa() {
                 type="button"
                 disabled={convidado}
                 onClick={() => setConvidados((atuais) => [...atuais, pessoa.nome])}
-                className="shrink-0 rounded-full bg-amber px-4 py-2 text-[0.875rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:bg-amber-100 disabled:text-ink-soft"
+                className="flex h-11 shrink-0 items-center rounded-full bg-amber px-4 text-[0.875rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:bg-amber-100 disabled:text-ink-soft"
               >
                 {convidado ? "convidado" : "convidar"}
               </button>

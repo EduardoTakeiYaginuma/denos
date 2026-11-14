@@ -36,7 +36,7 @@ export default function Perfil() {
             <Link
               to="/perfil/editar"
               aria-label="editar perfil"
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 text-ink transition-transform active:scale-90"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 text-ink transition-transform active:scale-90"
               style={{ borderColor: perfil.borda }}
             >
               <PencilIcon className="h-4 w-4" />
@@ -58,7 +58,10 @@ export default function Perfil() {
         <h3 className="text-[1.125rem] font-semibold lowercase text-ink">
           nossos laços
         </h3>
-        <button type="button" className="text-[0.875rem] text-ink-soft">
+        <button
+          type="button"
+          className="-mr-2 flex min-h-11 items-center px-2 text-[0.875rem] text-ink-soft"
+        >
           ver mais
         </button>
       </div>

@@ -95,6 +95,7 @@ export default function Cadastro() {
           <TextField
             name="given-name"
             placeholder="nome"
+            aria-label="nome"
             autoComplete="given-name"
             autoCapitalize="words"
             value={campos.nome}
@@ -104,6 +105,7 @@ export default function Cadastro() {
           <TextField
             name="family-name"
             placeholder="sobrenome"
+            aria-label="sobrenome"
             autoComplete="family-name"
             autoCapitalize="words"
             value={campos.sobrenome}
@@ -114,6 +116,7 @@ export default function Cadastro() {
             name="email"
             type="email"
             placeholder="e-mail"
+            aria-label="e-mail"
             autoComplete="email"
             autoCapitalize="none"
             autoCorrect="off"
@@ -125,6 +128,7 @@ export default function Cadastro() {
           <PasswordField
             name="new-password"
             placeholder="senha"
+            aria-label="senha"
             autoComplete="new-password"
             value={campos.senha}
             error={errors.senha}
@@ -133,6 +137,7 @@ export default function Cadastro() {
           <PasswordField
             name="confirm-password"
             placeholder="confirmar senha"
+            aria-label="confirmar senha"
             autoComplete="new-password"
             value={campos.confirmarSenha}
             error={errors.confirmarSenha}
@@ -146,7 +151,10 @@ export default function Cadastro() {
           </Button>
           <p className="text-center text-[0.9375rem] text-muted">
             Já tem conta?{" "}
-            <Link to="/login" className="font-semibold text-ink-soft">
+            <Link
+              to="/login"
+              className="inline-block py-3 font-semibold text-ink-soft underline-offset-4 active:underline"
+            >
               Entrar
             </Link>
           </p>

@@ -74,7 +74,7 @@ export default function EditarPerfil() {
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
-            className="text-[0.9375rem] text-amber-deep"
+            className="flex min-h-11 items-center px-3 text-[0.9375rem] text-amber-texto underline-offset-4 active:underline"
           >
             trocar foto
           </button>

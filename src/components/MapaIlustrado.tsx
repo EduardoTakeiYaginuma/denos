@@ -61,7 +61,7 @@ export default function MapaIlustrado({ children }: MapaIlustradoProps) {
         </g>
       </svg>
 
-      <span className="absolute bottom-1.5 right-2 rounded bg-white/70 px-1.5 py-0.5 text-[0.5625rem] text-ink-soft">
+      <span className="absolute bottom-1.5 right-2 rounded bg-branco px-1.5 py-0.5 text-[0.5625rem] text-ink">
         mapa ilustrado · demo
       </span>
 

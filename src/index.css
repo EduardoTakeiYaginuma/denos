@@ -7,10 +7,12 @@
   --color-cream-soft: #fbf0db;
   --color-amber: #e9ac4c;
   --color-amber-deep: #d99a36;
+  /* âmbar só para TEXTO sobre fundo claro — o -deep reprova no contraste AA */
+  --color-amber-texto: #8d6817;
   --color-amber-soft: #f3d9a6;
   --color-ink: #4b3426;
   --color-ink-soft: #6b5342;
-  --color-muted: #a09a90;
+  --color-muted: #6f665c;
 
   /* superfícies */
   --color-amber-100: #f7e3ba;

@@ -84,7 +84,7 @@ export default function Login() {
             <div className="mt-2 flex justify-end">
               <Link
                 to="/recuperar-senha"
-                className="text-[0.9375rem] text-ink-soft underline underline-offset-4 decoration-ink-soft/50"
+                className="-mr-2 flex min-h-11 items-center px-2 text-[0.9375rem] text-ink-soft underline underline-offset-4 decoration-ink-soft/50"
               >
                 esqueci a senha
               </Link>
@@ -110,7 +110,10 @@ export default function Login() {
 
           <p className="pt-2 text-center text-[0.9375rem] text-muted">
             Ainda não tem conta?{" "}
-            <Link to="/cadastro" className="font-semibold text-ink-soft">
+            <Link
+              to="/cadastro"
+              className="inline-block py-3 font-semibold text-ink-soft underline-offset-4 active:underline"
+            >
               Cadastre
             </Link>
           </p>

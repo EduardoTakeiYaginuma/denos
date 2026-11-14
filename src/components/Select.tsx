@@ -42,9 +42,9 @@ export default function Select({
           value={value}
           aria-invalid={error ? true : undefined}
           aria-describedby={error ? errorId : undefined}
-          className={`h-13 w-full appearance-none truncate rounded-full border bg-transparent pl-5 pr-11 text-[clamp(0.75rem,3.3vw,0.9375rem)] outline-none transition-colors focus:ring-2 focus:ring-amber/40 ${
+          className={`h-13 w-full appearance-none truncate rounded-full border bg-transparent pl-5 pr-11 text-base outline-none transition-colors focus:ring-2 focus:ring-amber/40 ${
             error ? "border-red-400" : "border-amber"
-          } ${vazio ? "text-ink-soft/55" : "text-ink"} ${className}`}
+          } ${vazio ? "text-ink-soft/85" : "text-ink"} ${className}`}
           {...props}
         >
           <option value="" disabled>

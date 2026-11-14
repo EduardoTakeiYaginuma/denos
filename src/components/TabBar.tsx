@@ -48,7 +48,6 @@ export default function TabBar() {
         ref={inputRef}
         type="file"
         accept="image/*"
-        capture="environment"
         className="hidden"
         onChange={(e) => {
           handleFoto(e.target.files?.[0] ?? null);

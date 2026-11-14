@@ -62,16 +62,16 @@ export default function Calendario() {
             >
               <NumeroDoDia valor={c.dia} />
               <div className="min-w-0 flex-1">
-                <p className="truncate text-[0.9375rem] font-semibold lowercase text-ink">
+                <p className="text-[0.9375rem] font-semibold leading-tight lowercase text-ink">
                   {c.titulo}
                 </p>
-                <p className="truncate text-[0.75rem] text-ink-soft">{c.quando}</p>
+                <p className="mt-0.5 text-[0.75rem] text-ink-soft">{c.quando}</p>
               </div>
               <button
                 type="button"
                 disabled={confirmado}
                 onClick={() => setConfirmados((a) => [...a, c.dia])}
-                className={`shrink-0 rounded-full px-3.5 py-2 text-[0.8125rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:opacity-60 ${
+                className={`flex h-11 shrink-0 items-center rounded-full px-3.5 text-[0.8125rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:opacity-60 ${
                   c.destaque ? "bg-amber" : "border border-ink bg-transparent"
                 }`}
               >
@@ -89,10 +89,10 @@ export default function Calendario() {
       <div className="mt-3 flex items-center gap-3 rounded-2xl bg-rosa-100 px-3 py-3">
         <NumeroDoDia valor={ENCONTRO_SUGERIDO.dia} />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[0.9375rem] font-semibold lowercase text-ink">
+          <p className="text-[0.9375rem] font-semibold leading-tight lowercase text-ink">
             {ENCONTRO_SUGERIDO.titulo}
           </p>
-          <p className="truncate text-[0.75rem] text-ink-soft">
+          <p className="mt-0.5 text-[0.75rem] text-ink-soft">
             {ENCONTRO_SUGERIDO.descricao}
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function Calendario() {
           type="button"
           disabled={marcado}
           onClick={() => setMarcado(true)}
-          className="shrink-0 rounded-full bg-rosa-200 px-3.5 py-2 text-[0.8125rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:opacity-60"
+          className="flex h-11 shrink-0 items-center rounded-full bg-rosa-200 px-3.5 text-[0.8125rem] font-semibold lowercase text-ink transition-transform active:scale-[0.97] disabled:opacity-60"
         >
           {marcado ? "marcado" : "marcar"}
         </button>
@@ -111,9 +111,9 @@ export default function Calendario() {
 
 function NumeroDoDia({ valor }: { valor: number }) {
   return (
-    <span className="flex shrink-0 items-center gap-2.5 pl-1">
+    <span className="flex shrink-0 items-center gap-2.5 self-stretch pl-1">
       <span className="text-[1.125rem] font-semibold text-ink">{valor}</span>
-      <span className="h-9 w-px bg-ink/25" />
+      <span className="h-10 w-px bg-ink/25" />
     </span>
   );
 }

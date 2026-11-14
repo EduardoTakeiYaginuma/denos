@@ -30,7 +30,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             ref={ref}
             aria-invalid={error ? true : undefined}
             aria-describedby={error ? errorId : undefined}
-            className={`h-13 w-full rounded-full border bg-transparent px-5 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-ink-soft/55 focus:ring-2 focus:ring-amber/40 ${
+            className={`h-13 w-full rounded-full border bg-transparent px-5 text-base text-ink outline-none transition-colors placeholder:text-ink-soft/85 focus:ring-2 focus:ring-amber/40 ${
               error ? "border-red-400" : "border-amber"
             } ${trailing ? "pr-13" : ""} ${className}`}
             {...props}

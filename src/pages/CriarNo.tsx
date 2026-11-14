@@ -89,7 +89,7 @@ export default function CriarNo() {
           <Select
             label="o que nos une?"
             name="vinculo"
-            placeholder="selecione uma opção (amigos/trabalho/família)"
+            placeholder="selecione uma opção"
             options={VINCULOS}
             value={vinculo}
             error={errors.vinculo}
@@ -109,7 +109,7 @@ export default function CriarNo() {
           <Select
             label="privacidade"
             name="privacidade"
-            placeholder="selecione uma opção (público, privado)"
+            placeholder="selecione uma opção"
             options={PRIVACIDADES}
             value={privacidade}
             error={errors.privacidade}

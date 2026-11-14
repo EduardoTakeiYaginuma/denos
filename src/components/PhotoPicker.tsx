@@ -62,7 +62,7 @@ export default function PhotoPicker({ cor, onChange }: PhotoPickerProps) {
       <button
         type="button"
         onClick={() => inputRef.current?.click()}
-        className="text-[0.875rem] text-amber-deep underline-offset-4 active:underline"
+        className="flex min-h-11 items-center px-3 text-[0.875rem] text-amber-texto underline-offset-4 active:underline"
       >
         {preview ? "trocar foto" : "adicionar foto"}
       </button>
