@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream: #fcf4e4;
+  --color-cream-soft: #fbf0db;
+  --color-amber: #e9ac4c;
+  --color-amber-deep: #d99a36;
+  --color-amber-soft: #f3d9a6;
+  --color-ink: #4b3426;
+  --color-ink-soft: #6b5342;
+  --color-muted: #a09a90;
+
+  /* superfícies */
+  --color-amber-100: #f7e3ba;
+  --color-amber-200: #f0cd8a;
+  --color-rosa-100: #f9e6f1;
+  --color-rosa-200: #f2c8e0;
+  --color-azul-200: #a8bfe0;
+  --color-branco: #fffdf8;
+
+  /* cores do nó */
+  --color-no-amarelo: #e9ac4c;
+  --color-no-verde: #7a9440;
+  --color-no-azul: #3b6ca8;
+  --color-no-terracota: #c8481e;
+  --color-no-rosa: #f0c4df;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+  }
+
+  input {
+    font-family: inherit;
+  }
+
+  /* o autofill do Chrome pintava o campo de azul */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-ink);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-cream) inset;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+}

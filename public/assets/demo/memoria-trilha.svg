@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe0ea"/><stop offset="1" stop-color="#f3e7cf"/>
+    </linearGradient>
+    <linearGradient id="morro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fa352"/><stop offset="1" stop-color="#5e7536"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#ceu)"/>
+  <circle cx="645" cy="118" r="46" fill="#f4d79a"/>
+  <path d="M0 330 L130 248 L268 322 L392 236 L536 326 L664 258 L800 318 L800 600 L0 600Z" fill="#a8ab7a" opacity="0.65"/>
+  <path d="M0 400 L150 330 L330 404 L520 340 L690 412 L800 378 L800 600 L0 600Z" fill="url(#morro)"/>
+  <g fill="#4a5c2b" opacity="0.55">
+    <ellipse cx="120" cy="470" rx="54" ry="34"/><ellipse cx="300" cy="512" rx="70" ry="40"/>
+    <ellipse cx="560" cy="486" rx="62" ry="36"/><ellipse cx="730" cy="530" rx="58" ry="34"/>
+  </g>
+  <path d="M250 600 Q360 470 470 600Z" fill="#c9b48a" opacity="0.5"/>
+</svg>
