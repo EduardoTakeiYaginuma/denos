@@ -47,6 +47,10 @@ Controlado por [src/lib/config.ts](src/lib/config.ts).
 | `/calendario` | mês, compromissos, marcar encontro |
 | `/perfil` | estatísticas, laços, menu, logout |
 | `/perfil/editar` | nome, foto, borda do ícone, conquistas visíveis |
+| `/nova-memoria` | escolher a foto (galeria fake + arquivo do aparelho) |
+| `/nova-memoria/editar` | filtros, cortar, ajustar e girar |
+| `/nova-memoria/compartilhar` | legenda, marcar pessoas, local, calendário |
+| `/memoria/:id` | ver a memória: curtir, salvar e comentar |
 
 As quatro primeiras telas internas vivem dentro de `AppShell` (header + tab bar
 flutuante). A tab bar tem 4 itens: início, mapa, câmera e calendário.
@@ -61,6 +65,7 @@ src/
   pages/        Login, RecuperarSenha, LinkEnviado, Cadastro, CriarNo,
                 NoCriado, Feed, Mapa, Calendario, Perfil, EditarPerfil
   lib/no.ts         cores do nó, vínculos e privacidade
+  lib/filtros.ts    presets de filtro (CSS filter) e proporções de recorte
   lib/demo-data.ts  TODO o conteúdo das telas internas (nomes, fotos, datas)
   lib/memorias.tsx  feed em memória + foto tirada pela câmera
   lib/perfil.tsx    estado do perfil compartilhado entre /perfil e /perfil/editar
@@ -120,8 +125,13 @@ nome (a mesma pessoa tem sempre a mesma cor).
   recarregar `/no-criado` cai no texto genérico
 - o feed, o perfil e os botões de convidar/confirmar/marcar guardam estado só em
   memória: recarregar a página volta tudo ao conteúdo de `demo-data.ts`
-- o botão da câmera abre a câmera/galeria do aparelho e põe a foto no topo do
-  feed; nada é enviado pra lugar nenhum
+- a aba da câmera abre `/nova-memoria`; o "+" dessa tela abre a câmera ou a
+  galeria do aparelho. A foto publicada vive só em memória, nada é enviado
+- a edição é toda em CSS (`filter`, `transform`, `aspect-ratio`): a imagem
+  original não é reprocessada, então o que for publicado guarda o estilo mas
+  não gera um arquivo novo. Pra valer, isso vira um `<canvas>` no backend
+- "adicionar ao calendário" guarda a escolha no rascunho, mas ainda não cria
+  nada em `/calendario`
 - não há rota pra "memórias salvas", "cápsulas do tempo", "ajuda" e
   "configurações" — os botões existem mas não navegam
 - o sino de notificações e os cards "missão semanal" / "memória do mês" também

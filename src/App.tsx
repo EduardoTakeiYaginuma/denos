@@ -12,6 +12,10 @@ import Mapa from "./pages/Mapa";
 import Calendario from "./pages/Calendario";
 import Perfil from "./pages/Perfil";
 import EditarPerfil from "./pages/EditarPerfil";
+import NovaMemoria from "./pages/NovaMemoria";
+import EditarMemoria from "./pages/EditarMemoria";
+import CompartilharMemoria from "./pages/CompartilharMemoria";
+import VerMemoria from "./pages/VerMemoria";
 
 export default function App() {
   return (
@@ -34,6 +38,12 @@ export default function App() {
           <Route path="/calendario" element={<Calendario />} />
           <Route path="/perfil" element={<Perfil />} />
           <Route path="/perfil/editar" element={<EditarPerfil />} />
+
+          {/* publicar memória */}
+          <Route path="/nova-memoria" element={<NovaMemoria />} />
+          <Route path="/nova-memoria/editar" element={<EditarMemoria />} />
+          <Route path="/nova-memoria/compartilhar" element={<CompartilharMemoria />} />
+          <Route path="/memoria/:id" element={<VerMemoria />} />
 
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

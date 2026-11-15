@@ -1,22 +1,10 @@
-import { useRef } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CalendarIcon, CameraIcon, HomeIcon, MapIcon } from "./icons";
-import { useMemorias } from "../lib/memorias";
 
 const itemBase =
   "flex h-12 flex-1 items-center justify-center rounded-full transition-colors";
 
 export default function TabBar() {
-  const navigate = useNavigate();
-  const { adicionarFoto } = useMemorias();
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  function handleFoto(file: File | null) {
-    if (!file) return;
-    adicionarFoto(file);
-    navigate("/feed");
-  }
-
   return (
     <nav
       aria-label="navegação principal"
@@ -30,30 +18,15 @@ export default function TabBar() {
           <MapIcon className="h-6 w-6" />
         </Aba>
 
-        <button
-          type="button"
-          aria-label="registrar memória"
-          onClick={() => inputRef.current?.click()}
-          className={`${itemBase} text-cream/70 active:bg-white/10`}
-        >
+        <Aba to="/nova-memoria" rotulo="nova memória">
           <CameraIcon className="h-6 w-6" />
-        </button>
+        </Aba>
 
         <Aba to="/calendario" rotulo="calendário">
           <CalendarIcon className="h-6 w-6" />
         </Aba>
       </div>
 
-      <input
-        ref={inputRef}
-        type="file"
-        accept="image/*"
-        className="hidden"
-        onChange={(e) => {
-          handleFoto(e.target.files?.[0] ?? null);
-          e.target.value = "";
-        }}
-      />
     </nav>
   );
 }

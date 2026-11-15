@@ -132,3 +132,34 @@ export const PinIcon = (p: IconProps) => (
     <circle cx="12" cy="10.5" r="2.5" />
   </Icon>
 );
+
+export const HeartIcon = (p: IconProps & { cheio?: boolean }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill={p.cheio ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth="1.7"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={p.className ?? "h-6 w-6"}
+    aria-hidden="true"
+  >
+    <path d="M12 20.3S3.5 15.2 3.5 9.6a4.6 4.6 0 0 1 8.5-2.4 4.6 4.6 0 0 1 8.5 2.4c0 5.6-8.5 10.7-8.5 10.7Z" />
+  </svg>
+);
+
+export const MoreIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none" />
+    <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" />
+    <circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none" />
+  </Icon>
+);
+
+export const SmileIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M8.5 14a4.2 4.2 0 0 0 7 0" />
+    <path d="M9.3 9.5h.01M14.7 9.5h.01" />
+  </Icon>
+);

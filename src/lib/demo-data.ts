@@ -13,14 +13,44 @@ export const POSTS_INICIAIS: Post[] = [
     autor: "isa",
     quando: "há 2 horas",
     foto: "/assets/demo/memoria-trilha.svg",
+    legenda: "subiu todo mundo e ninguém desistiu",
+    local: "pedra grande",
+    pessoas: ["thais", "du"],
+    curtidas: 48,
+    curtidaPorMim: false,
+    salva: false,
+    comentarios: [
+      { id: "c1", autor: "lis", quando: "há 1 hora", texto: "KKKKKKKKK" },
+      { id: "c2", autor: "gabi", quando: "há 40 min", texto: "que fofos!" },
+    ],
   },
   {
     id: "p2",
     autor: "thais",
     quando: "há 5 dias",
     foto: "/assets/demo/memoria-show.svg",
+    legenda: "joão rock, até a última música",
+    local: "ribeirão preto",
+    curtidas: 31,
+    curtidaPorMim: true,
+    salva: true,
+    comentarios: [
+      { id: "c3", autor: "pedro", quando: "há 4 dias", texto: "o melhor dia do ano" },
+    ],
   },
 ];
+
+/** Fotos recentes do "rolo da câmera" fake, pra escolher na nova publicação. */
+export const GALERIA_RECENTE = [
+  "/assets/demo/memoria-amigos.svg",
+  "/assets/demo/memoria-passaro.svg",
+  "/assets/demo/memoria-palco.svg",
+  "/assets/demo/memoria-trilha.svg",
+  "/assets/demo/memoria-show.svg",
+];
+
+/** Quem dá pra marcar numa memória. */
+export const PESSOAS_DO_NO = ["isa", "thais", "gabi", "lis", "du", "pedro"];
 
 export const PERGUNTA_DO_DIA = {
   texto: "quem do grupo ganharia de um urso?",

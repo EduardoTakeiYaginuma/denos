@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AppShell from "../components/AppShell";
 import Avatar from "../components/Avatar";
+import PreviewFoto from "../components/PreviewFoto";
 import { ChatIcon, KnotIcon, SparkleIcon, TargetIcon, UsersIcon } from "../components/icons";
 import { useMemorias } from "../lib/memorias";
 import { CIRCULO, PERGUNTA_DO_DIA } from "../lib/demo-data";
@@ -67,12 +68,27 @@ export default function Feed() {
                 <p className="text-[0.875rem] text-muted">{post.quando}</p>
               </div>
             </div>
-            <img
-              src={post.foto}
-              alt={`memória de ${post.autor}`}
-              className="mt-3 aspect-[4/3] w-full rounded-2xl object-cover"
-              draggable={false}
-            />
+
+            <Link
+              to={`/memoria/${post.id}`}
+              className="mt-3 block"
+              aria-label={`abrir memória de ${post.autor}`}
+            >
+              <PreviewFoto
+                foto={post.foto}
+                estilo={post.estilo}
+                giro={post.giro}
+                proporcao={post.proporcao}
+                className="rounded-2xl"
+                alt={`memória de ${post.autor}`}
+              />
+            </Link>
+
+            {post.legenda && (
+              <p className="mt-2 text-[0.9375rem] leading-snug text-ink">
+                {post.legenda}
+              </p>
+            )}
           </article>
         ))}
       </section>
